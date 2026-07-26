@@ -1,0 +1,12 @@
+id: initialize-cli-repository
+objective: Establish the AI Flywheel CLI repository as the governed home of the cross-platform .NET command-line product.
+status: active
+human_authority: Infoconex
+success_criteria:
+  - The repository has a valid root Flywheel control plane.
+  - CLI and framework ownership boundaries are documented.
+  - Candidate CLI code and installers from the sample repository are classified for migration.
+  - Changes are presented through a pull request and not merged without approval.
+constraints:
+  - Do not commit directly to main.
+  - Do not duplicate framework-owned templates and schemas.
