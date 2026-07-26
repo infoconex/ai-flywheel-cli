@@ -1,0 +1,32 @@
+identity:
+  name: AI Flywheel CLI
+  purpose: Cross-platform .NET CLI for installing, managing, validating, and operating AI Flywheel projects.
+  status: approved
+repository:
+  type: dotnet-cli
+  primary_users:
+    - AI-assisted software engineering teams
+architecture:
+  summary: Contains the executable, deterministic core services, installers, tests, and command documentation.
+  boundaries:
+    - Framework templates, schemas, walkthrough content, and migrations belong in Infoconex/ai-flywheel-framework.
+    - Sample-specific mission history and evidence remain in Infoconex/ai-flywheel-0.3.0-sample.
+validation:
+  commands:
+    - dotnet build
+    - dotnet test
+constraints:
+  - Target .NET 10.
+  - Support PowerShell and Bash installation paths.
+  - Do not commit directly to main.
+  - Do not enable GitHub-hosted execution without human approval.
+protected_paths:
+  - .flywheel/governance.yaml
+  - src/
+  - test/
+risks:
+  - Coupling the CLI too tightly to one framework template version.
+documentation_sources:
+  - https://github.com/Infoconex/ai-flywheel-spec
+  - https://github.com/Infoconex/ai-flywheel-framework
+  - https://github.com/Infoconex/ai-flywheel-0.3.0-sample
